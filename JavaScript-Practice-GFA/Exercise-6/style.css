@@ -1,0 +1,12 @@
+main {font-weight: bold;}
+h1 {color:red;}
+h2 {color:purple;}
+h3 {color:purple;}
+.one {
+  text-decoration:underline;
+  color: #ff007f
+}
+.two {text-decoration: underline;}
+
+ol {list-style-type: upper-roman;}
+
