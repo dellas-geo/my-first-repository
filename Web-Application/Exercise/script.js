@@ -1,29 +1,67 @@
+// Object //
+
 let data = {
     photo: 'Images/Elephant.jpg',
     title: ' African Elephant',
-    description: 'A nice African Elephant'
-};
+    description: 'A nice African Elephant'};
 
-$('#photo').attr('src', data.photo);
+// Variables //
 
-
-
+let currentTitle= 0;
 let currentPhoto = 0;
+let currentDesc = 0;
+
+// Arrays //
+
 let imagesData = ['Images/Elephant.jpg', 'Images/Deer.jpg', 'Images/Bird.jpg', 'Images/Owl.jpg',]
+let titleData = ['African Elephant', 'Reindeer', 'Woodpecker', 'Owl']
+let descData = [ 'The African elephant (Loxodonta) is a genus comprising two living elephant species, the African bush elephant (L. africana) and the smaller African forest elephant (L. cyclotis). Both are social herbivores with grey skin, but differ in the size and color of their tusks and in the shape and size of their ears and skulls.',
+ 'The reindeer (Rangifer tarandus), also known as caribou in North America,[3] is a species of deer with circumpolar distribution, native to Arctic, subarctic, tundra, boreal, and mountainous regions of northern Europe, Siberia, and North America. ',
+ 'Woodpeckers are part of the family Picidae, that also includes the piculets, wrynecks, and sapsuckers. Members of this family are found worldwide, except for Australia, New Guinea, New Zealand, Madagascar, and the extreme polar regions.',
+ 'Owls are birds from the order Strigiformes /ˈstrɪdʒɪfɔːrmiːz/, which includes over 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight.']
+
+// Functions //
 
 let loadPhoto = (photoNumber) => {
-$('#photo').attr('src', imagesData[photoNumber]);
-}
+$('#photo').attr('src', imagesData[photoNumber]);}
 loadPhoto(currentPhoto);
+
+let loadTitle = (titleNumber) => {
+$('#photo-title').text(titleData[titleNumber]);}
+loadTitle(currentTitle);
+
+let loadDesc = (descNumber) => {
+$('#photo-description').text(descData[descNumber]);}
+loadDesc(currentDesc);
+
+// Click Functions //
 
 $('#next').click(() => {
     if(currentPhoto < 3){
     currentPhoto++;}
-    loadPhoto(currentPhoto);
-})
+    loadPhoto(currentPhoto);})
+
+$('#next').click(() => {
+    if(currentTitle < 3){
+    currentTitle++;}
+    loadTitle(currentTitle);})
+
+$('#next').click(() => {
+    if(currentDesc < 3){
+    currentDesc++;}
+    loadDesc(currentDesc);})
 
 $('#previous').click(() => {
     if(currentPhoto > 0){
     currentPhoto--;}
-    loadPhoto(currentPhoto);
-})
+    loadPhoto(currentPhoto);})
+
+$('#previous').click(() => {
+    if(currentTitle > 0){
+    currentTitle--;}
+    loadTitle(currentTitle);})
+
+$('#previous').click(() => {
+    if(currentDesc > 0){
+    currentDesc--;}
+    loadDesc(currentDesc);})

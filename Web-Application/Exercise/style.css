@@ -24,8 +24,8 @@ body {
 }
 #previous, #next {
     cursor: pointer;
-    top: 38%;
-    width: 25px;        
+    top: 45%;
+    width: 45px;        
 }
 #previous {
     left: 22%;
@@ -35,3 +35,18 @@ body {
     right:19%;  
     position: absolute;
 }
+.opa-box {
+    font-size: 26px;
+    color:white;
+    position: absolute;
+    width: 52.2%;
+    height: 21%;
+    left: 24.4%;
+    right: 24.7%;
+    top: 71%;
+    background-color: black;
+    padding:1%;
+    text-align:left;
+    opacity:0.7;
+}
+
